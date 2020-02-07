@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Ricerca Abitante</title>
 </head>
 <body>
 <% List<Municipio> municipi =(List<Municipio>) request.getAttribute("listaMunicipiAttributeName");
@@ -55,7 +55,7 @@
   			
   			<div class="form-group">        
 		      <div class="col-sm-offset-2 col-sm-10">
-		        <button type="submit" class="btn btn-primary btn-md">Effetua Ricerca</button>
+		        <button type="submit" class="btn btn-primary btn-md">Effettua Ricerca</button>
 		        
 		        <a href="PrepareInsertAbitanteServlet" class="btn btn-primary btn-md">Inserisci Nuovo Elemento</a>
 		      </div>
