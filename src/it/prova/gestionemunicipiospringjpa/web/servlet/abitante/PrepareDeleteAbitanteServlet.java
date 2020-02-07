@@ -52,7 +52,7 @@ public class PrepareDeleteAbitanteServlet extends HttpServlet {
 		
 		request.setAttribute("abitanteInput", abitante);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("deleteAbitante.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/abitante/deleteAbitante.jsp");
 		rd.forward(request, response);
 	}
 

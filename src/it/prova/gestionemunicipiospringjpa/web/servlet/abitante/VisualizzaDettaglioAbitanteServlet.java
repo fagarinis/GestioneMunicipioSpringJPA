@@ -13,7 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
+import it.prova.gestionemunicipiospringjpa.model.Abitante;
 import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
+import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class VisualizzaDettaglioAbitanteServlet
@@ -21,7 +23,10 @@ import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
 @WebServlet("/VisualizzaDettaglioAbitanteServlet")
 public class VisualizzaDettaglioAbitanteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+      
+	@Autowired
+	private MunicipioService municipioService;
+	
 	@Autowired
 	private AbitanteService abitanteService;
 	
@@ -43,7 +48,9 @@ public class VisualizzaDettaglioAbitanteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String idAbitanteDaPagina = request.getParameter("idAbitante");
-		request.setAttribute("abitanteSingoloAttributeName", abitanteService.caricaSingoloAbitante(Long .parseLong(idAbitanteDaPagina)));
+		Abitante abitante = abitanteService.caricaSingoloAbitante(Long .parseLong(idAbitanteDaPagina));
+		
+		request.setAttribute("abitanteSingoloAttributeName", abitante);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("abitante/dettaglio.jsp");
 		rd.forward(request, response);

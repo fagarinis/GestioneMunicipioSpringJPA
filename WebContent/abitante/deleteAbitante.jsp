@@ -48,9 +48,10 @@
 		</div>
 		
 		
-		<form action = "EseguiEliminaPersonaServlet" method ="post">
+		<form action = "ExecuteDeleteAbitanteServlet" method ="post">
 			<input type = "hidden" name = "idAbitante" value = "<%=abitanteInPagina.getId()%>" >
-			<input type ="submit" value ="Cancella">
+			
+			<input class="container-fluid" type ="submit" value ="Cancella">
 		</form>
 
 	</div>

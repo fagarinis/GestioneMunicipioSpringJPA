@@ -45,7 +45,7 @@
 	    		
 					<select class="form-control" name="idMunicipio" >
 					<%for(Municipio m:municipi){ %>
-					<option class="form-control" value="<%=m.getId() %>"><%=m.getDescrizione() %></option>
+					<option class="form-control" value="<%=m.getId()%>"><%=m.getDescrizione() %></option>
 					<%} %>
 					
 					</select>
@@ -56,7 +56,8 @@
   			<div class="form-group">        
 		      <div class="col-sm-offset-2 col-sm-10">
 		        <button type="submit" class="btn btn-primary btn-md">Effetua Ricerca</button>
-		        <a href="" class="btn btn-primary btn-md">Inserisci Nuovo Elemento</a>
+		        
+		        <a href="PrepareInsertAbitanteServlet" class="btn btn-primary btn-md">Inserisci Nuovo Elemento</a>
 		      </div>
 		    </div>
 		</form>

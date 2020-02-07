@@ -69,7 +69,7 @@ public class ExecuteSearchAbitanteServlet extends HttpServlet {
 		
 		List<Abitante>abitanti = abitanteService.findByExample(abitante);
 		
-		request.setAttribute("listaAbitanteAttributeName", abitanti);
+		request.setAttribute("listaAbitantiAttributeName", abitanti);
 		RequestDispatcher rd = request.getRequestDispatcher("/abitante/result.jsp");
 		rd.forward(request, response);
 	}

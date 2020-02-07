@@ -32,13 +32,8 @@
 				<dt class="col-sm-3 text-right">Età</dt>
 				<dd class="col-sm-9"><%=abitanteInPagina.getEta()%></dd>
 			</dl>
-			<dl class="row">
-				<dt class="col-sm-3 text-right">Municipio</dt>
-				<dd class="col-sm-9"><%=abitanteInPagina.getMunicipio()%></dd>
-			</dl>
-		
-		
-			<a href="search.jsp" class="btn btn-info">Torna Alla Home</a>
+			
+<!-- 			<a href="abitante/search.jsp" class="btn btn-info">Torna Alla Home</a> -->
 				
 		</div>
 

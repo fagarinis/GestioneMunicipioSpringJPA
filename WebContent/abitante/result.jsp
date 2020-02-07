@@ -35,9 +35,9 @@
 				<td><%=abitanteItem.getNome() %></td>
 				<td><%=abitanteItem.getCognome() %></td>
 				<td>
-					<a href="VisualizzaDettaglioPersonaServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Dettaglio</a>
-					<a href="PreparaModificaPersonaServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Modifica</a>
-					<a href="PreparaEliminaPersonaServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Elimina</a>
+					<a href="VisualizzaDettaglioAbitanteServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Dettaglio</a>
+					<a href="PrepareUpdateAbitanteServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Modifica</a>
+					<a href="PrepareDeleteAbitanteServlet?idAbitante=<%=abitanteItem.getId() %>" class="btn btn-info">Elimina</a>
 				</td>
 			</tr>
 				
