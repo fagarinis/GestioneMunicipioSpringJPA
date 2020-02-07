@@ -72,7 +72,7 @@ public class ExecuteDeleteAbitanteServlet extends HttpServlet {
 		request.setAttribute("listaAbitantiAttributeName", listaAbitanti);
 		
 		
-		RequestDispatcher rd = request.getRequestDispatcher("result.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/abitante/result.jsp");
 		rd.forward(request, response);
 	}
 
