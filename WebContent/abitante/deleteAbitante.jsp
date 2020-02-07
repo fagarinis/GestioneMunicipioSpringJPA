@@ -51,7 +51,11 @@
 		<form action = "ExecuteDeleteAbitanteServlet" method ="post">
 			<input type = "hidden" name = "idAbitante" value = "<%=abitanteInPagina.getId()%>" >
 			
-			<input class="container-fluid" type ="submit" value ="Cancella">
+			<div class="form-group">        
+		      <div class="col-sm-offset-2 col-sm-10">
+		        <button type="submit" class="btn btn-primary btn-md">Cancella</button>
+		      </div>
+		      </div>
 		</form>
 
 	</div>
