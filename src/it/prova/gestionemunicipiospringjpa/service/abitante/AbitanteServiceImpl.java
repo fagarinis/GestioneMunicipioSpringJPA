@@ -48,4 +48,10 @@ public class AbitanteServiceImpl implements AbitanteService {
 		return abitanteDAO.findByExample(example);
 	}
 
+	@Transactional(readOnly = true)
+	@Override
+	public Abitante caricaSingoloAbitanteEager(Long id) {
+		return abitanteDAO.getEager(id);
+	}
+
 }

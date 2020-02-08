@@ -15,11 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import it.prova.gestionemunicipiospringjpa.model.Municipio;
-import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
 import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class PrepareInsertAbitanteServlet
+ * @author claudia258
  */
 @WebServlet("/PrepareInsertAbitanteServlet")
 public class PrepareInsertAbitanteServlet extends HttpServlet {
@@ -27,8 +27,6 @@ public class PrepareInsertAbitanteServlet extends HttpServlet {
 	
 	@Autowired
 	private MunicipioService municipioService;
-	@Autowired
-	private AbitanteService abitanteService;
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException{
@@ -37,7 +35,6 @@ public class PrepareInsertAbitanteServlet extends HttpServlet {
 	}
     public PrepareInsertAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -56,7 +53,6 @@ public class PrepareInsertAbitanteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

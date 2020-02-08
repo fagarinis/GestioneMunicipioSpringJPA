@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="author" content="claudia258">
 <title>Inserisci Nuovo Abitante</title>
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/css/jqueryUI/jquery-ui.min.css" />

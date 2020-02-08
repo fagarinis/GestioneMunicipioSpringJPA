@@ -16,6 +16,10 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import it.prova.gestionemunicipiospringjpa.model.Municipio;
 import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
+/**
+ * Servlet implementation class ExecuteUpdateMunicipioServlet
+ * @author Cirotrent
+ */
 @WebServlet("/ExecuteUpdateMunicipioServlet")
 public class ExecuteUpdateMunicipioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -31,11 +35,9 @@ public class ExecuteUpdateMunicipioServlet extends HttpServlet {
        
     public ExecuteUpdateMunicipioServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -45,7 +47,6 @@ public class ExecuteUpdateMunicipioServlet extends HttpServlet {
 			return;
 		}
 		
-		String destinazione = "";
 
 		String idMunicipioDaPagina = request.getParameter("idMunicipio");
 		Municipio municipioDaModificare = municipioService.caricaSingoloMunicipio(Long.parseLong(idMunicipioDaPagina));

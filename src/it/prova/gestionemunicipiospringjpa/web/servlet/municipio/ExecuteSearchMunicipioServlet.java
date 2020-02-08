@@ -16,7 +16,10 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import it.prova.gestionemunicipiospringjpa.model.Municipio;
 import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
-
+/**
+ * Servlet implementation class ExecuteSearchMunicipioServlet
+ * @author matteodigge
+ */
 @WebServlet("/ExecuteSearchMunicipioServlet")
 public class ExecuteSearchMunicipioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

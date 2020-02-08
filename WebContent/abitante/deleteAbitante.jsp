@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="author" content="federicof1994">
 <title>Cancella Abitante</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -43,6 +44,10 @@
 			<dl class="row">
 				<dt class="col-sm-3 text-right">Residenza</dt>
 				<dd class="col-sm-9"><%=abitanteInPagina.getResidenza() %></dd>
+			</dl>
+			<dl class="row">
+				<dt class="col-sm-3 text-right">Municipio</dt>
+				<dd class="col-sm-9"><%=abitanteInPagina.getMunicipio().getDescrizione() %></dd>
 			</dl>
 
 		</div>

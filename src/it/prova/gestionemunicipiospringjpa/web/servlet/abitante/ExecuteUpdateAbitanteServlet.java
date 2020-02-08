@@ -21,6 +21,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class ExecuteUpdateAbitanteServlet
+ * @author MohamedMohamedAli
  */
 @WebServlet("/ExecuteUpdateAbitanteServlet")
 public class ExecuteUpdateAbitanteServlet extends HttpServlet {
@@ -39,14 +40,12 @@ public class ExecuteUpdateAbitanteServlet extends HttpServlet {
 	
     public ExecuteUpdateAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -71,7 +70,6 @@ public class ExecuteUpdateAbitanteServlet extends HttpServlet {
 		abitante.setMunicipio(municipio);
 		abitanteService.aggiorna(abitante);
 		List<Abitante>abitanti = abitanteService.listAllAbitanti();
-		System.out.println(abitanti.size());
 		
 		request.setAttribute("listaAbitantiAttributeName", abitanti);
 		RequestDispatcher rd = request.getRequestDispatcher("/abitante/result.jsp");

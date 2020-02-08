@@ -21,6 +21,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class ExecuteSearchAbitanteServlet
+ * @author MohamedMohamedAli
  */
 @WebServlet("/ExecuteSearchAbitanteServlet")
 public class ExecuteSearchAbitanteServlet extends HttpServlet {
@@ -40,14 +41,12 @@ public class ExecuteSearchAbitanteServlet extends HttpServlet {
 	
     public ExecuteSearchAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -55,12 +54,16 @@ public class ExecuteSearchAbitanteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Long idMunicipio= Long.parseLong(request.getParameter("idMunicipio"));
+		//se viene selezionata la voce "Tutti" (value = "null") nel menu a tendina della search di abitante
+		//idMunicipio viene inizializzato a null
+		Long idMunicipio= request.getParameter("idMunicipio").equals("null")? null: Long.parseLong(request.getParameter("idMunicipio"));
 		String nome = request.getParameter("nomeInput");
 		String cognome = request.getParameter("cognomeInput");
 		String indirizzo = request.getParameter("indirizzoInput");
 		Abitante abitante = new Abitante();
-		Municipio municipio = municipioService.caricaSingoloMunicipio(idMunicipio);
+		
+		//il municipio e' null se l'id municipio e' null
+		Municipio municipio = idMunicipio == null? null : municipioService.caricaSingoloMunicipio(idMunicipio);
 		
 		abitante.setNome(nome);
 		abitante.setCognome(cognome);

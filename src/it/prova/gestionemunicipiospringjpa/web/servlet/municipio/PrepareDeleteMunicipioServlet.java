@@ -20,6 +20,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class PrepareDeleteMunicipioServlet
+ * @author Cirotrent
  */
 @WebServlet("/PrepareDeleteMunicipioServlet")
 public class PrepareDeleteMunicipioServlet extends HttpServlet {

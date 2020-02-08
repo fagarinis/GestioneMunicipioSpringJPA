@@ -18,6 +18,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class VisualizzaDettaglioMunicipioServlet
+ * @author matteodigge
  */
 @WebServlet("/VisualizzaDettaglioMunicipioServlet")
 public class VisualizzaDettaglioMunicipioServlet extends HttpServlet {

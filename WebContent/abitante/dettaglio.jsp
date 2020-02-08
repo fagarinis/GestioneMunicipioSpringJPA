@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="author" content="claudia258">
 <title>Dettaglio Abitante</title>
 </head>
 <body>
@@ -32,6 +33,15 @@
 				<dt class="col-sm-3 text-right">Età</dt>
 				<dd class="col-sm-9"><%=abitanteInPagina.getEta()%></dd>
 			</dl>
+			<dl class="row">
+				<dt class="col-sm-3 text-right">Residenza</dt>
+				<dd class="col-sm-9"><%=abitanteInPagina.getResidenza()%></dd>
+			</dl>
+			<dl class="row">
+				<dt class="col-sm-3 text-right">Municipio</dt>
+				<dd class="col-sm-9"><%=abitanteInPagina.getMunicipio().getDescrizione()%></dd>
+			</dl>
+			
 			
 <!-- 			<a href="abitante/search.jsp" class="btn btn-info">Torna Alla Home</a> -->
 				

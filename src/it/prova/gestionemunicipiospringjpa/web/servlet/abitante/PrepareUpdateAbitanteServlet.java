@@ -21,6 +21,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class PrepareUpdateAbitanteServlet
+ * @author MohamedMohamedAli
  */
 @WebServlet("/PrepareUpdateAbitanteServlet")
 public class PrepareUpdateAbitanteServlet extends HttpServlet {
@@ -39,7 +40,6 @@ public class PrepareUpdateAbitanteServlet extends HttpServlet {
 	
     public PrepareUpdateAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -47,7 +47,7 @@ public class PrepareUpdateAbitanteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Long id = Long.parseLong(request.getParameter("idAbitante"));
-		Abitante abitante = abitanteService.caricaSingoloAbitante(id);
+		Abitante abitante = abitanteService.caricaSingoloAbitanteEager(id);
 		List<Municipio> municipi = municipioService.listAllMunicipi();
 		request.setAttribute("abitanteAttr", abitante);
 		request.setAttribute("listaMunicipiAttributeName", municipi);

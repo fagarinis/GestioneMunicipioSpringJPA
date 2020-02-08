@@ -18,4 +18,6 @@ public interface AbitanteService {
 
 	public List<Abitante> findByExample(Abitante example);
 	
+	public Abitante caricaSingoloAbitanteEager(Long id);
+	
 }

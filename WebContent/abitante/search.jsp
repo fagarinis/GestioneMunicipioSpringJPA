@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="author" content="MohamedMohamedali">
 <meta charset="ISO-8859-1">
 <title>Ricerca Abitante</title>
 </head>
@@ -43,12 +44,14 @@
       			<label class="control-label col-sm-2" for="municipioInputId">Municipio:</label>
 	    		<div class="col-sm-4">
 	    		
+	    			<!-- menu a tendina scelta municipio -->
 					<select class="form-control" name="idMunicipio" >
+					<option class="form-control" value = "null"> Tutti</option>
 					<%for(Municipio m:municipi){ %>
 					<option class="form-control" value="<%=m.getId()%>"><%=m.getDescrizione() %></option>
 					<%} %>
-					
 					</select>
+					
 					
 			 	</div>
   			</div>

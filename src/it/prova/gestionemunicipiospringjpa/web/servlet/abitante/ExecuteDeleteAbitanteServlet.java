@@ -19,6 +19,7 @@ import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
 
 /**
  * Servlet implementation class ExecuteDeleteAbitanteServlet
+ * @author federicof1994
  */
 @WebServlet("/ExecuteDeleteAbitanteServlet")
 public class ExecuteDeleteAbitanteServlet extends HttpServlet {
@@ -39,7 +40,6 @@ public class ExecuteDeleteAbitanteServlet extends HttpServlet {
 	 */
 	public ExecuteDeleteAbitanteServlet() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -48,8 +48,6 @@ public class ExecuteDeleteAbitanteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//#test
-		doPost(request,response);
 	}
 
 	/**

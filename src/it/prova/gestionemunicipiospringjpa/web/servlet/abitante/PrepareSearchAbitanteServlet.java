@@ -15,11 +15,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import it.prova.gestionemunicipiospringjpa.model.Municipio;
-import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
 import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class PrepareSearchAbitanteServlet
+ * @author MohamedMohamedAli
  */
 @WebServlet("/PrepareSearchAbitanteServlet")
 public class PrepareSearchAbitanteServlet extends HttpServlet {
@@ -36,7 +36,6 @@ public class PrepareSearchAbitanteServlet extends HttpServlet {
 	
     public PrepareSearchAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -49,10 +48,7 @@ public class PrepareSearchAbitanteServlet extends HttpServlet {
 					return;
 				}
 				
-				System.out.println("arrivo 1");
 				List<Municipio> municipi = municipioService.listAllMunicipi();
-				System.out.println("stampa");
-				System.out.println(municipi.size());
 				request.setAttribute("listaMunicipiAttributeName", municipi);
 				
 				RequestDispatcher rd = request.getRequestDispatcher("/abitante/search.jsp");
@@ -63,7 +59,6 @@ public class PrepareSearchAbitanteServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

@@ -16,6 +16,10 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 import it.prova.gestionemunicipiospringjpa.model.Municipio;
 import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
+/**
+ * Servlet implementation class PrepareUpdateMunicipioServlet
+ * @author Cirotrent
+ */
 @WebServlet("/PrepareUpdateMunicipioServlet")
 public class PrepareUpdateMunicipioServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

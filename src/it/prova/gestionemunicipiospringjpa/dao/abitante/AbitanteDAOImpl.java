@@ -80,4 +80,10 @@ public class AbitanteDAOImpl implements AbitanteDAO {
 
 	}
 
+	@Override
+	public Abitante getEager(long id) {
+		Abitante result = (Abitante) entityManager.createQuery("from Abitante a join fetch a.municipio where a.id ='"+ id+ "'").getSingleResult();
+		return result;
+	}
+
 }

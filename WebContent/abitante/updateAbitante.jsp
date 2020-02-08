@@ -7,6 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="author" content="MohamedMohamedAli">
 <title>Aggiorna abitante</title>
 </head>
 <body>
@@ -55,7 +56,11 @@
 	    		
 					<select class="form-control" name="idMunicipio" >
 					<%for(Municipio m:municipi){ %>
-					<option class="form-control" value="<%=m.getId()%>"><%=m.getDescrizione() %></option>
+					<!-- rende selezionato di default il municipio dell'abitante prima della modifica -->
+					<option <%if(m.getId() == abitante.getMunicipio().getId()){%> selected <%} %>
+					class="form-control" value="<%=m.getId()%>">
+					<%=m.getDescrizione() %>
+					</option>
 					<%} %>
 					
 					</select>

@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="author" content="matteodigge">
 <title>Risultati</title>
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>

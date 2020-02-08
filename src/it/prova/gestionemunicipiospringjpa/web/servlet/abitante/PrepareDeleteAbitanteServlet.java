@@ -1,6 +1,6 @@
 package it.prova.gestionemunicipiospringjpa.web.servlet.abitante;
 
-//F
+
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -12,14 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import it.prova.gestionemunicipiospringjpa.model.Abitante;
-import it.prova.gestionemunicipiospringjpa.model.Municipio;
 import it.prova.gestionemunicipiospringjpa.service.abitante.AbitanteService;
-import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 /**
  * Servlet implementation class PrepareDeleteAbitanteServlet
+ * @author federicof1994
  */
 @WebServlet("/PrepareDeleteAbitanteServlet")
 public class PrepareDeleteAbitanteServlet extends HttpServlet {
@@ -41,14 +40,13 @@ public class PrepareDeleteAbitanteServlet extends HttpServlet {
      */
     public PrepareDeleteAbitanteServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Abitante abitante = abitanteService.caricaSingoloAbitante(Long.parseLong(request.getParameter("idAbitante")));
+		Abitante abitante = abitanteService.caricaSingoloAbitanteEager(Long.parseLong(request.getParameter("idAbitante")));
 		
 		request.setAttribute("abitanteInput", abitante);
 		

@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="author" content="matteodigge">
 <title>Detteglio Municipio</title>
 </head>
 <body>

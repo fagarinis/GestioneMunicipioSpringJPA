@@ -20,6 +20,7 @@ import it.prova.gestionemunicipiospringjpa.service.municipio.MunicipioService;
 
 /**
  * Servlet implementation class ExecuteInsertAbitanteServlet
+ * @author claudia258
  */
 @WebServlet("/ExecuteInsertAbitanteServlet")
 public class ExecuteInsertAbitanteServlet extends HttpServlet {
