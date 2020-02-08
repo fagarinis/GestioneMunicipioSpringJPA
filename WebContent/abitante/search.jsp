@@ -46,7 +46,7 @@
 	    		
 	    			<!-- menu a tendina scelta municipio -->
 					<select class="form-control" name="idMunicipio" >
-					<option class="form-control" value = "null"> Tutti</option>
+					<option class="form-control" value = "null"> Qualsiasi</option>
 					<%for(Municipio m:municipi){ %>
 					<option class="form-control" value="<%=m.getId()%>"><%=m.getDescrizione() %></option>
 					<%} %>
