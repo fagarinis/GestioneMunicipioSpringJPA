@@ -45,6 +45,13 @@
 		%>
 	
 	</table>
+	
+	<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<a href="PrepareInsertMunicipioServlet"
+					class="btn btn-primary btn-md">Inserisci Nuovo Elemento</a>
+			</div>
+		</div>
 
 	<%@ include file="../footer.jsp" %>
 	

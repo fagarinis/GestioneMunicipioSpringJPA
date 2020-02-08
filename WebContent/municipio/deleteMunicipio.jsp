@@ -12,42 +12,44 @@
 <body>
 	<div class="container">
 
-   <%@ include file="/header.jsp" %>
-      
-    <div class="page-header">
-    <h3>Cancellazione</h3>
-    </div>
-    
-    <%Municipio municipio = (Municipio) request.getAttribute("deletemunicipio"); %>
-    <form action="ExecuteDeleteMunicipioServlet" method="post">
-    <div class="container-fluid">
-   			 <dl class="row">
-				<dt class="col-sm-3 text-right">Id</dt>
-				<dd class="col-sm-9"><%=municipio.getId()%></dd>
-			</dl>
-			<dl class="row">
-				<dt class="col-sm-3 text-right">Descrizione</dt>
-				<dd class="col-sm-9"><%=municipio.getDescrizione()%></dd>
-			</dl>
-			<dl class="row">
-				<dt class="col-sm-3 text-right">Codice</dt>
-				<dd class="col-sm-9"><%=municipio.getCodice()%></dd>
-			</dl>
-			<dl class="row">
-				<dt class="col-sm-3 text-right">Ubicazione</dt>
-				<dd class="col-sm-9"><%=municipio.getUbicazione()%></dd>
-			</dl>
-    </div>
-    
-    <input type=hidden name="idmunicipiodacancellare" value="<%=municipio.getId() %>">
-    <div class="form-group">        
-		      <div class="col-sm-offset-2 col-sm-10">
-		        <button type="submit" class="btn btn-primary btn-md">Cancella</button>
-		      </div>
-		    </div>
-		    </form>
-		    </div>
- 
+		<%@ include file="/header.jsp"%>
+
+		<div class="page-header">
+			<h3>Cancellazione</h3>
+		</div>
+
+		<%Municipio municipio = (Municipio) request.getAttribute("deletemunicipio"); %>
+		<form action="ExecuteDeleteMunicipioServlet" method="post">
+			<div class="container-fluid">
+				<dl class="row">
+					<dt class="col-sm-3 text-right">Id</dt>
+					<dd class="col-sm-9"><%=municipio.getId()%></dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-3 text-right">Descrizione</dt>
+					<dd class="col-sm-9"><%=municipio.getDescrizione()%></dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-3 text-right">Codice</dt>
+					<dd class="col-sm-9"><%=municipio.getCodice()%></dd>
+				</dl>
+				<dl class="row">
+					<dt class="col-sm-3 text-right">Ubicazione</dt>
+					<dd class="col-sm-9"><%=municipio.getUbicazione()%></dd>
+				</dl>
+			</div>
+
+			<input type=hidden name="idmunicipiodacancellare"
+				value="<%=municipio.getId() %>">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary btn-md">Cancella</button>
+				</div>
+			</div>
+		</form>
+		<%@ include file="../footer.jsp"%>
+	</div>
+	
 
 </body>
 </html>

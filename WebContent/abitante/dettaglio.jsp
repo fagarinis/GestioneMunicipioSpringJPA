@@ -41,12 +41,12 @@
 				<dt class="col-sm-3 text-right">Municipio</dt>
 				<dd class="col-sm-9"><%=abitanteInPagina.getMunicipio().getDescrizione()%></dd>
 			</dl>
-			
-			
-<!-- 			<a href="abitante/search.jsp" class="btn btn-info">Torna Alla Home</a> -->
-				
-		</div>
 
+
+			<!-- 			<a href="abitante/search.jsp" class="btn btn-info">Torna Alla Home</a> -->
+
+		</div>
+		<%@ include file="../footer.jsp"%>
 	</div>
 	
 </body>

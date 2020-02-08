@@ -43,10 +43,10 @@
 		      </div>
 		    </div>
 		</form>
-		
+		<%@ include file="../footer.jsp" %>
     </div><!-- /.container -->
 
-
+		
 
 </body>
 </html>

@@ -33,23 +33,10 @@
 				<dt class="col-sm-3 text-right">Ubicazione</dt>
 				<dd class="col-sm-9"><%=municipioInPagina.getUbicazione()%></dd>
 			</dl>
-
-			<!-- 			<a href="abitante/search.jsp" class="btn btn-info">Torna Alla Home</a> -->
-
 		</div>
-
+		<%@ include file="../footer.jsp" %>
+		
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
+	
 </body>
 </html>

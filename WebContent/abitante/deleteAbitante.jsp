@@ -17,9 +17,9 @@
 	%>
 
 	<div class="container">
-	
-		
-		<%@ include file="/header.jsp"%> 
+
+
+		<%@ include file="/header.jsp"%>
 
 		<div class="page-header">
 			<h3>Pagina di conferma cancellazione</h3>
@@ -51,19 +51,20 @@
 			</dl>
 
 		</div>
-		
-		
-		<form action = "ExecuteDeleteAbitanteServlet" method ="post">
-			<input type = "hidden" name = "idAbitante" value = "<%=abitanteInPagina.getId()%>" >
-			
-			<div class="form-group">        
-		      <div class="col-sm-offset-2 col-sm-10">
-		        <button type="submit" class="btn btn-primary btn-md">Cancella</button>
-		      </div>
-		      </div>
+
+
+		<form action="ExecuteDeleteAbitanteServlet" method="post">
+			<input type="hidden" name="idAbitante"
+				value="<%=abitanteInPagina.getId()%>">
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-primary btn-md">Cancella</button>
+				</div>
+			</div>
 		</form>
-
+		<%@ include file="../footer.jsp"%>
 	</div>
-
+	
 </body>
 </html>
