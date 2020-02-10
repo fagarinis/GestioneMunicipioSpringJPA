@@ -22,8 +22,7 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>Nome</th>
-				<th>Cognome</th>
+				<th>Denominazione</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -31,8 +30,6 @@
 			for(Municipio municipioItem:listaMunicipi){ %>
 			<tr>
 				<td><%=municipioItem.getDescrizione() %></td>
-				<td><%=municipioItem.getUbicazione() %></td>
-				<td><%=municipioItem.getCodice() %></td>
 				<td>
 					<a href="VisualizzaDettaglioMunicipioServlet?idMunicipio=<%=municipioItem.getId() %>" class="btn btn-info">Dettaglio</a>
 					<a href="PrepareUpdateMunicipioServlet?idMunicipio=<%=municipioItem.getId() %>" class="btn btn-info">Modifica</a>
